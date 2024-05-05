@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 3.5)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -17,6 +17,3 @@ include_directories(${ICU_INCLUDE_DIRS})
 
 add_library(pmx Pmx.cpp)
 target_link_libraries(pmx PRIVATE ${ICU_LIBRARIES})
-
-add_executable(demo test.cpp)
-target_link_libraries(demo pmx)
